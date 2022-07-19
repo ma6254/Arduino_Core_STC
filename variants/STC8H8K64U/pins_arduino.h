@@ -1,0 +1,226 @@
+#ifndef Pins_Arduino_h
+#define Pins_Arduino_h
+
+#include "pins_arduino_include.h"
+
+#ifndef _BV
+#define _BV(X) (1 << (X))
+#endif
+
+__code uint8_t PROGMEM digital_pin_to_port_PGM[] = {
+    NOT_A_PORT, // Placeholder 0
+    // bottom
+    P5PORT, //  1 TxD4_2/P5.3
+    P0PORT, //  2 T3CLKO/ADC13/AD5/P0.5
+    P0PORT, //  3 PWMETI2_2/T4/ADC14/AD6/P0.6
+    P0PORT, //  4 4CLKO/AD7/P0.7
+    P6PORT, //  5 PWM1P_3/P6.0
+    P6PORT, //  6 PWM1N_3/P6.1
+    P6PORT, //  7 PWM2P_3/P6.2
+    P6PORT, //  8 PWM2N_3/P6.3
+    P1PORT, //  9 RxD2/PWM1P/ADC0/P1.0
+    P1PORT, // 10 TxD2/PWM1N/ADC1/P1.1
+    P4PORT, // 11 TxD2_2/P4.7
+    P1PORT, // 12 SDA/MISO/PWM3P/ADC4/P1.4
+    P1PORT, // 13 SCL/SCLK/PWM3N/ADC5/P1.5
+    P1PORT, // 14 XTALO/MCLKO_2/RxD_3/PWM4P/ADC6/P1.6
+    P1PORT, // 15 XTALI/PWM5_2/TxD_3/PWM4N/ADC7/P1.7
+    P1PORT, // 16 T2CLKO/MOSI/PWM2N/ADC3/P1.3
+    // right
+    NOT_A_PORT, // 17 UCap
+    P5PORT,     // 18 P5.4/NRST/MCLKO/SS/SS_3/PWM2P/PWM6_2/ADC2/T2
+    NOT_A_PORT, // 19 Vcc/AVcc
+    NOT_A_PORT, // 20 ADC_VRef+
+    NOT_A_PORT, // 21 Gnd/AGnd
+    P4PORT,     // 22 P4.0/MOSI_3
+    P6PORT,     // 23 P6.4/PWM3P_3
+    P6PORT,     // 24 P6.5/PWM3N_3
+    P6PORT,     // 25 P6.6/PWM4P_3
+    P6PORT,     // 26 P6.7/PWM4N_3
+    P3PORT,     // 27 P3.0/RxD/D-/INT4
+    P3PORT,     // 28 P3.1/TxD/D+
+    P3PORT,     // 29 P3.2/INT0/SCLK_4/SCL_4/PWMETI/PWMETI2
+    P3PORT,     // 30 P3.3/INT1/MISO_4/SDA_4/PWM4N_4/PWM7_2
+    P3PORT,     // 31 P3.4/T0/T1CLKO/MOSI_4/PWM4P_4/PWM8_2/CMPO
+    P5PORT,     // 32 P5.0/RxD3_2/CMP+_2
+    // top
+    P5PORT, // 33 P5.1/TxD3_2/CMP+_3
+    P3PORT, // 34 P3.5/T1/T0CLKO/SS_4/PWMFLT/PWMFLT2
+    P3PORT, // 35 P3.6/INT2/RxD_2/CMP-
+    P3PORT, // 36 P3.7/INT3/TxD_2/CMP+
+    P7PORT, // 37 P7.0
+    P7PORT, // 38 P7.1
+    P7PORT, // 39 P7.2
+    P7PORT, // 40 P7.3/PWMETI_3
+    P4PORT, // 41 P4.1/MISO_3/CMPO_2/PWMETI_2
+    P4PORT, // 42 P4.2/WR
+    P4PORT, // 43 P4.3/RxD_4/SCLK_3
+    P4PORT, // 44 P4.4/RD/TxD_4
+    P2PORT, // 45 P2.0/A8/PWM1P_2/PWM5
+    P2PORT, // 46 P2.1/A9/PWM1N_2/PWM6
+    P2PORT, // 47 P2.2/A10/PWM2P_2/PWM7/SS_2
+    P2PORT, // 48 P2.3/A11/PWM2N_2/PWM8/MOSI_2
+    // left
+    P2PORT, // 49 MISO_2/SDA_2/PWM3P_2/A12/P2.4
+    P2PORT, // 50 SCLK_2/SCL_2/PWM3N_2/A13/P2.5
+    P2PORT, // 51 PWM4P_2/A14/P2.6
+    P2PORT, // 52 PWM4N_2/A15/P2.7
+    P7PORT, // 53 PWM5_4/P7.4
+    P7PORT, // 54 PWM6_4/P7.5
+    P7PORT, // 55 PWM7_4/P7.6
+    P7PORT, // 56 PWM8_4/P7.7
+    P4PORT, // 57 ALE/P4.5
+    P4PORT, // 58 RxD2_2/P4.6
+    P0PORT, // 59 T3_2/PWM5_3/RxD3/ADC8/AD0/P0.0
+    P0PORT, // 60 T3CLKO_2/PWM6_3/TxD3/ADC9/AD1/P0.1
+    P0PORT, // 61 T4_2/PWM7_3/RxD4/ADC10/AD2/P0.2
+    P0PORT, // 62 T4CLKO_2/PWM8_3/TxD4/ADC11/AD3/P0.3
+    P0PORT, // 63 T3/ADC12/AD4/P0.4
+    P5PORT, // 64 RxD4_2/P5.2
+};
+
+__code uint8_t digital_pin_to_bit_mask_PGM[] = {
+    NOT_A_PIN, // Placeholder 0
+    // bottom
+    _BV(3), //  1 TxD4_2/P5.3
+    _BV(5), //  2 T3CLKO/ADC13/AD5/P0.5
+    _BV(6), //  3 PWMETI2_2/T4/ADC14/AD6/P0.6
+    _BV(7), //  4 4CLKO/AD7/P0.7
+    _BV(0), //  5 PWM1P_3/P6.0
+    _BV(1), //  6 PWM1N_3/P6.1
+    _BV(2), //  7 PWM2P_3/P6.2
+    _BV(3), //  8 PWM2N_3/P6.3
+    _BV(0), //  9 RxD2/PWM1P/ADC0/P1.0
+    _BV(1), // 10 TxD2/PWM1N/ADC1/P1.1
+    _BV(7), // 11 TxD2_2/P4.7
+    _BV(4), // 12 SDA/MISO/PWM3P/ADC4/P1.4
+    _BV(5), // 13 SCL/SCLK/PWM3N/ADC5/P1.5
+    _BV(6), // 14 XTALO/MCLKO_2/RxD_3/PWM4P/ADC6/P1.6
+    _BV(7), // 15 XTALI/PWM5_2/TxD_3/PWM4N/ADC7/P1.7
+    _BV(3), // 16 T2CLKO/MOSI/PWM2N/ADC3/P1.3
+    // right
+    NOT_A_PIN, // 17 UCap
+    _BV(4),    // 18 P5.4/NRST/MCLKO/SS/SS_3/PWM2P/PWM6_2/ADC2/T2
+    NOT_A_PIN, // 19 Vcc/AVcc
+    NOT_A_PIN, // 20 ADC_VRef+
+    NOT_A_PIN, // 21 Gnd/AGnd
+    _BV(0),    // 22 P4.0/MOSI_3
+    _BV(4),    // 23 P6.4/PWM3P_3
+    _BV(5),    // 24 P6.5/PWM3N_3
+    _BV(6),    // 25 P6.6/PWM4P_3
+    _BV(7),    // 26 P6.7/PWM4N_3
+    _BV(0),    // 27 P3.0/RxD/D-/INT4
+    _BV(1),    // 28 P3.1/TxD/D+
+    _BV(2),    // 29 P3.2/INT0/SCLK_4/SCL_4/PWMETI/PWMETI2
+    _BV(3),    // 30 P3.3/INT1/MISO_4/SDA_4/PWM4N_4/PWM7_2
+    _BV(4),    // 31 P3.4/T0/T1CLKO/MOSI_4/PWM4P_4/PWM8_2/CMPO
+    _BV(0),    // 32 P5.0/RxD3_2/CMP+_2
+    // top
+    _BV(1), // 33 P5.1/TxD3_2/CMP+_3
+    _BV(5), // 34 P3.5/T1/T0CLKO/SS_4/PWMFLT/PWMFLT2
+    _BV(6), // 35 P3.6/INT2/RxD_2/CMP-
+    _BV(7), // 36 P3.7/INT3/TxD_2/CMP+
+    _BV(0), // 37 P7.0
+    _BV(1), // 38 P7.1
+    _BV(2), // 39 P7.2
+    _BV(3), // 40 P7.3/PWMETI_3
+    _BV(1), // 41 P4.1/MISO_3/CMPO_2/PWMETI_2
+    _BV(2), // 42 P4.2/WR
+    _BV(3), // 43 P4.3/RxD_4/SCLK_3
+    _BV(4), // 44 P4.4/RD/TxD_4
+    _BV(0), // 45 P2.0/A8/PWM1P_2/PWM5
+    _BV(1), // 46 P2.1/A9/PWM1N_2/PWM6
+    _BV(2), // 47 P2.2/A10/PWM2P_2/PWM7/SS_2
+    _BV(3), // 48 P2.3/A11/PWM2N_2/PWM8/MOSI_2
+    // left
+    _BV(4), // 49 MISO_2/SDA_2/PWM3P_2/A12/P2.4
+    _BV(5), // 50 SCLK_2/SCL_2/PWM3N_2/A13/P2.5
+    _BV(6), // 51 PWM4P_2/A14/P2.6
+    _BV(7), // 52 PWM4N_2/A15/P2.7
+    _BV(4), // 53 PWM5_4/P7.4
+    _BV(5), // 54 PWM6_4/P7.5
+    _BV(6), // 55 PWM7_4/P7.6
+    _BV(7), // 56 PWM8_4/P7.7
+    _BV(5), // 57 ALE/P4.5
+    _BV(6), // 58 RxD2_2/P4.6
+    _BV(0), // 59 T3_2/PWM5_3/RxD3/ADC8/AD0/P0.0
+    _BV(1), // 60 T3CLKO_2/PWM6_3/TxD3/ADC9/AD1/P0.1
+    _BV(2), // 61 T4_2/PWM7_3/RxD4/ADC10/AD2/P0.2
+    _BV(3), // 62 T4CLKO_2/PWM8_3/TxD4/ADC11/AD3/P0.3
+    _BV(4), // 63 T3/ADC12/AD4/P0.4
+    _BV(2), // 64 RxD4_2/P5.2
+};
+
+__code uint8_t digital_pin_to_channel_PGM[] = {
+    NOT_ANALOG, // Placeholder 0
+    // bottom
+    NOT_ANALOG, //  1 TxD4_2/P5.3
+    13,         //  2 T3CLKO/ADC13/AD5/P0.5
+    14,         //  3 PWMETI2_2/T4/ADC14/AD6/P0.6
+    NOT_ANALOG, //  4 4CLKO/AD7/P0.7
+    NOT_ANALOG, //  5 PWM1P_3/P6.0
+    NOT_ANALOG, //  6 PWM1N_3/P6.1
+    NOT_ANALOG, //  7 PWM2P_3/P6.2
+    NOT_ANALOG, //  8 PWM2N_3/P6.3
+    0,          //  9 RxD2/PWM1P/ADC0/P1.0
+    1,          // 10 TxD2/PWM1N/ADC1/P1.1
+    NOT_ANALOG, // 11 TxD2_2/P4.7
+    4,          // 12 SDA/MISO/PWM3P/ADC4/P1.4
+    5,          // 13 SCL/SCLK/PWM3N/ADC5/P1.5
+    6,          // 14 XTALO/MCLKO_2/RxD_3/PWM4P/ADC6/P1.6
+    7,          // 15 XTALI/PWM5_2/TxD_3/PWM4N/ADC7/P1.7
+    3,          // 16 T2CLKO/MOSI/PWM2N/ADC3/P1.3
+    // right
+    NOT_ANALOG, // 17 UCap
+    2,          // 18 P5.4/NRST/MCLKO/SS/SS_3/PWM2P/PWM6_2/ADC2/T2
+    NOT_ANALOG, // 19 Vcc/AVcc
+    NOT_ANALOG, // 20 ADC_VRef+
+    NOT_ANALOG, // 21 Gnd/AGnd
+    NOT_ANALOG, // 22 P4.0/MOSI_3
+    NOT_ANALOG, // 23 P6.4/PWM3P_3
+    NOT_ANALOG, // 24 P6.5/PWM3N_3
+    NOT_ANALOG, // 25 P6.6/PWM4P_3
+    NOT_ANALOG, // 26 P6.7/PWM4N_3
+    NOT_ANALOG, // 27 P3.0/RxD/D-/INT4
+    NOT_ANALOG, // 28 P3.1/TxD/D+
+    NOT_ANALOG, // 29 P3.2/INT0/SCLK_4/SCL_4/PWMETI/PWMETI2
+    NOT_ANALOG, // 30 P3.3/INT1/MISO_4/SDA_4/PWM4N_4/PWM7_2
+    NOT_ANALOG, // 31 P3.4/T0/T1CLKO/MOSI_4/PWM4P_4/PWM8_2/CMPO
+    NOT_ANALOG, // 32 P5.0/RxD3_2/CMP+_2
+    // top
+    NOT_ANALOG, // 33 P5.1/TxD3_2/CMP+_3
+    NOT_ANALOG, // 34 P3.5/T1/T0CLKO/SS_4/PWMFLT/PWMFLT2
+    NOT_ANALOG, // 35 P3.6/INT2/RxD_2/CMP-
+    NOT_ANALOG, // 36 P3.7/INT3/TxD_2/CMP+
+    NOT_ANALOG, // 37 P7.0
+    NOT_ANALOG, // 38 P7.1
+    NOT_ANALOG, // 39 P7.2
+    NOT_ANALOG, // 40 P7.3/PWMETI_3
+    NOT_ANALOG, // 41 P4.1/MISO_3/CMPO_2/PWMETI_2
+    NOT_ANALOG, // 42 P4.2/WR
+    NOT_ANALOG, // 43 P4.3/RxD_4/SCLK_3
+    NOT_ANALOG, // 44 P4.4/RD/TxD_4
+    NOT_ANALOG, // 45 P2.0/A8/PWM1P_2/PWM5
+    NOT_ANALOG, // 46 P2.1/A9/PWM1N_2/PWM6
+    NOT_ANALOG, // 47 P2.2/A10/PWM2P_2/PWM7/SS_2
+    NOT_ANALOG, // 48 P2.3/A11/PWM2N_2/PWM8/MOSI_2
+    // left
+    NOT_ANALOG, // 49 MISO_2/SDA_2/PWM3P_2/A12/P2.4
+    NOT_ANALOG, // 50 SCLK_2/SCL_2/PWM3N_2/A13/P2.5
+    NOT_ANALOG, // 51 PWM4P_2/A14/P2.6
+    NOT_ANALOG, // 52 PWM4N_2/A15/P2.7
+    NOT_ANALOG, // 53 PWM5_4/P7.4
+    NOT_ANALOG, // 54 PWM6_4/P7.5
+    NOT_ANALOG, // 55 PWM7_4/P7.6
+    NOT_ANALOG, // 56 PWM8_4/P7.7
+    NOT_ANALOG, // 57 ALE/P4.5
+    NOT_ANALOG, // 58 RxD2_2/P4.6
+    8,          // 59 T3_2/PWM5_3/RxD3/ADC8/AD0/P0.0
+    9,          // 60 T3CLKO_2/PWM6_3/TxD3/ADC9/AD1/P0.1
+    10,         // 61 T4_2/PWM7_3/RxD4/ADC10/AD2/P0.2
+    11,         // 62 T4CLKO_2/PWM8_3/TxD4/ADC11/AD3/P0.3
+    12,         // 63 T3/ADC12/AD4/P0.4
+    NOT_ANALOG, // 64 RxD4_2/P5.2
+};
+
+#endif

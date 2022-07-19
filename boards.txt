@@ -1,0 +1,55 @@
+# See: https://arduino.github.io/arduino-cli/latest/platform-specification/
+
+menu.usb_settings=USB Settings
+menu.upload_method=Upload method
+menu.clock=Clock Source
+
+##############################################################
+
+#===============================================================================
+# STC8G1K08A
+#===============================================================================
+STC8G1K08A.name=STC8G1K08A Board
+STC8G1K08A.build.mcu=stc8051
+STC8G1K08A.build.core=stc8g
+STC8G1K08A.build.board=STC8G1K08A
+STC8G1K08A.build.variant=STC8G1K08A
+
+# XRAM
+#   offset: 0
+#   Size: 1K
+STC8G1K08A.upload.xdata_location=0
+STC8G1K08A.upload.maximum_data_size=1024
+
+# Flash Size: 8K
+STC8G1K08A.upload.maximum_size=8192
+
+#===============================================================================
+# STC8H
+#===============================================================================
+STC8H8K64U.name=STC8H8K64U Board
+STC8H8K64U.build.mcu=stc8051
+STC8H8K64U.build.core=stc8h
+STC8H8K64U.build.board=STC8H8K64U
+STC8H8K64U.build.variant=STC8H8K64U
+
+STC8H8K64U.menu.clock.inel_12M=12 MHz (internal)
+STC8H8K64U.menu.clock.inel_12M.build.f_cpu=12000000L
+
+STC8H8K64U.menu.clock.inel_24M=24 MHz (internal)
+STC8H8K64U.menu.clock.inel_24M.build.f_cpu=24000000L
+
+STC8H8K64U.menu.clock.inel_30M=30 MHz (internal)
+STC8H8K64U.menu.clock.inel_30M.build.f_cpu=30000000L
+
+STC8H8K64U.menu.clock.inel_35M=35 MHz (internal)
+STC8H8K64U.menu.clock.inel_35M.build.f_cpu=35000000L
+
+# XRAM
+#   offset: 0
+#   Size: 8K
+STC8H8K64U.upload.xdata_location=0
+STC8H8K64U.upload.maximum_data_size=8192
+
+# Flash Size: 64K
+STC8H8K64U.upload.maximum_size=65536

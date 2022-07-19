@@ -1,0 +1,84 @@
+{
+  "packages": [
+    {
+      "name": "STCDuino",
+      "maintainer": "ma6254",
+      "websiteURL": "https://github.com/ma6254/Arduino_Core_STC",
+      "email": "9a6c5609806a@gmail.com",
+      "help": {
+        "online": "https://github.com/ma6254/Arduino_Core_STC"
+      },
+      "platforms": [
+        {
+          "name": "STCDuino plain C core (non-C++)",
+          "architecture": "stc8051",
+          "version": "0.0.1",
+          "category": "Contributed",
+          "boards": [
+            {
+              "name": "STC8G1K08A Board"
+            },
+            {
+              "name": "STC8H8K64U Board"
+            }
+          ],
+          "toolsDependencies": [
+            {
+              "name": "sdcc",
+              "version": "build.13407",
+              "packager": "STCDuino"
+            },
+            {
+              "name": "stc8051_tools",
+              "version": "v0.0.1",
+              "packager": "STCDuino"
+            }
+          ],
+          "url": "https://github.com/ma6254/Arduino_Core_STC/archive/refs/heads/main.zip",
+          "archiveFileName": "main.zip"
+        }
+      ],
+      "tools": [
+        {
+          "name": "sdcc",
+          "version": "build.13511",
+          "systems": [
+            {
+              "host": "i686-mingw32",
+              "url": "https://raw.githubusercontent.com/ma6254/stc8051_tools/main/sdcc-snapshot-i586-mingw32msvc-20220619-13511.zip",
+              "archiveFileName": "sdcc-snapshot-i586-mingw32msvc-20220619-13511.zip",
+              "checksum": "SHA-256:D7BA3BAC0427E6A090F3D952CACC17AC63C726935C928DBD72707F1E2855F3D2",
+              "size": "34606196"
+            }
+          ]
+        },
+        {
+          "name": "sdcc",
+          "version": "build.13407",
+          "systems": [
+            {
+              "host": "i686-mingw32",
+              "url": "https://raw.githubusercontent.com/ma6254/stc8051_tools/main/sdcc-mcs51-i586-mingw32msvc-20220422-13407.tar.bz2",
+              "archiveFileName": "sdcc-mcs51-i586-mingw32msvc-20220422-13407.tar.bz2",
+              "checksum": "SHA-256:ee557b269e8256a59f39b428b0597525a09b4a7b80f28481e19f3fc8bac6a4f5",
+              "size": "2073934"
+            }
+          ]
+        },
+        {
+          "name": "stc8051_tools",
+          "version": "v0.0.1",
+          "systems": [
+            {
+              "host": "i686-mingw32",
+              "url": "https://github.com/ma6254/stc8051_tools/raw/main/stcduino-tools_mingw32-2022.05.06.tar.bz2",
+              "archiveFileName": "stcduino-tools_mingw32-2022.05.06.tar.bz2",
+              "checksum": "SHA-256:4577A53ACD3FD56D2A8B39F19F9049AF1C38FE947D83056B42FDA0E05AC554F3",
+              "size": "718122"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
