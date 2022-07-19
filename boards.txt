@@ -1,8 +1,8 @@
 # See: https://arduino.github.io/arduino-cli/latest/platform-specification/
 
 menu.usb_settings=USB Settings
-menu.upload_method=Upload method
 menu.clock=Clock Source
+menu.upload_method=Upload method
 
 ##############################################################
 
@@ -42,8 +42,17 @@ STC8H8K64U.menu.clock.inel_24M.build.f_cpu=24000000L
 STC8H8K64U.menu.clock.inel_30M=30 MHz (internal)
 STC8H8K64U.menu.clock.inel_30M.build.f_cpu=30000000L
 
+
+STC8H8K64U.upload.protocol=stcburn
+
 STC8H8K64U.menu.clock.inel_35M=35 MHz (internal)
 STC8H8K64U.menu.clock.inel_35M.build.f_cpu=35000000L
+
+STC8H8K64U.menu.upload_method.stcflash=stcflash
+STC8H8K64U.menu.upload_method.stcflash.upload.tool=stcflash
+
+STC8H8K64U.menu.upload_method.stcgal=stcgal
+STC8H8K64U.menu.upload_method.stcgal.upload.tool=stcgal
 
 # XRAM
 #   offset: 0

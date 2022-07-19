@@ -32,6 +32,16 @@
               "name": "stc8051_tools",
               "version": "v0.0.1",
               "packager": "STCDuino"
+            },
+            {
+              "name": "stcflash",
+              "version": "v0.0.1",
+              "packager": "STCDuino"
+            },
+            {
+              "name": "python3",
+              "version": "3.7.2-post1",
+              "packager": "STCDuino"
             }
           ],
           "url": "https://github.com/ma6254/Arduino_Core_STC/archive/refs/heads/main.zip",
@@ -75,6 +85,72 @@
               "archiveFileName": "stcduino-tools_mingw32-2022.05.06.tar.bz2",
               "checksum": "SHA-256:4577A53ACD3FD56D2A8B39F19F9049AF1C38FE947D83056B42FDA0E05AC554F3",
               "size": "718122"
+            }
+          ]
+        },
+        {
+          "name": "stcflash",
+          "version": "v0.0.1",
+          "systems": [
+            {
+              "host": "i686-mingw32",
+              "url": "https://github.com/sms-wyt/stcflash/archive/refs/heads/master.zip",
+              "archiveFileName": "stcflash-master.zip"
+            }
+          ]
+        },
+        {
+          "version": "3.7.2-post1",
+          "name": "python3",
+          "systems": [
+            {
+              "host": "x86_64-mingw32",
+              "url": "https://github.com/earlephilhower/esp-quick-toolchain/releases/download/2.5.0-4/python3-3.7.2.post1-embed-win32v2a.zip",
+              "archiveFileName": "python3-3.7.2.post1-embed-win32v2a.zip",
+              "checksum": "SHA-256:f57cb2daf86176d2929e7c58990c2ac32554e3219d454dcac10e464ddda35bf2",
+              "size": "6428926"
+            },
+            {
+              "host": "i686-mingw32",
+              "url": "https://github.com/earlephilhower/esp-quick-toolchain/releases/download/2.5.0-4/python3-3.7.2.post1-embed-win32v2a.zip",
+              "archiveFileName": "python3-3.7.2.post1-embed-win32v2a.zip",
+              "checksum": "SHA-256:f57cb2daf86176d2929e7c58990c2ac32554e3219d454dcac10e464ddda35bf2",
+              "size": "6428926"
+            },
+            {
+              "host": "aarch64-linux-gnu",
+              "url": "https://github.com/earlephilhower/esp-quick-toolchain/releases/download/2.5.0-4/python3-via-env.tar.gz",
+              "archiveFileName": "python3-via-env.tar.gz",
+              "checksum": "SHA-256:c9237bfe0f62842d7187a39495baa4a7e3ab8b87c0b433614294b023cf0bc0f3",
+              "size": "292"
+            },
+            {
+              "host": "arm-linux-gnueabihf",
+              "url": "https://github.com/earlephilhower/esp-quick-toolchain/releases/download/2.5.0-4/python3-via-env.tar.gz",
+              "archiveFileName": "python3-via-env.tar.gz",
+              "checksum": "SHA-256:c9237bfe0f62842d7187a39495baa4a7e3ab8b87c0b433614294b023cf0bc0f3",
+              "size": "292"
+            },
+            {
+              "host": "i686-pc-linux-gnu",
+              "url": "https://github.com/earlephilhower/esp-quick-toolchain/releases/download/2.5.0-4/python3-via-env.tar.gz",
+              "archiveFileName": "python3-via-env.tar.gz",
+              "checksum": "SHA-256:c9237bfe0f62842d7187a39495baa4a7e3ab8b87c0b433614294b023cf0bc0f3",
+              "size": "292"
+            },
+            {
+              "host": "x86_64-apple-darwin",
+              "url": "https://github.com/earlephilhower/esp-quick-toolchain/releases/download/2.5.0-4/python3-macosx-portable.tar.gz",
+              "archiveFileName": "python3-macosx-portable.tar.gz",
+              "checksum": "SHA-256:01a5bf1fa264c6f04cfaadf4c6e9f6caaacb6833ef40104dfbe953fcdb9bca1c",
+              "size": "25494144"
+            },
+            {
+              "host": "x86_64-pc-linux-gnu",
+              "url": "https://github.com/earlephilhower/esp-quick-toolchain/releases/download/2.5.0-4/python3-via-env.tar.gz",
+              "archiveFileName": "python3-via-env.tar.gz",
+              "checksum": "SHA-256:c9237bfe0f62842d7187a39495baa4a7e3ab8b87c0b433614294b023cf0bc0f3",
+              "size": "292"
             }
           ]
         }

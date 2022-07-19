@@ -11,6 +11,8 @@ version=0.0.1
 # ----------------------------------
 runtime.tools.sdcc.path={runtime.hardware.path}/tools/sdcc
 runtime.tools.stc8051_tools.path={runtime.hardware.path}/tools
+runtime.tools.stcflash.path={runtime.hardware.path}/tools
+runtime.tools.python3.path={runtime.platform.path}/tools/python3
 
 # compile variables
 # ---------------------
@@ -114,3 +116,16 @@ preproc.includes.flags=-M -MG -MP
 recipe.preproc.includes="{compiler.path.wrapper}/{compiler.cpp.wrapper}" "{compiler.path}/{compiler.cpp.cmd}" re11 {compiler.cpp.flags} {preproc.includes.flags} -mmcs51 -D{build.mcu} -DF_CPU={build.f_cpu} -DF_EXT_OSC={build.f_oscillator_external} -DARDUINO={runtime.ide.version} -DARDUINO_{build.board} -DARDUINO_ARCH_{build.arch} {compiler.cpp.extra_flags} {build.extra_flags} {includes} "{source_file}"
 preproc.macros.flags=-E -MC
 recipe.preproc.macros="{compiler.wrapper.path}/{compiler.cpp.cmd}.sh" "{compiler.path}/{compiler.cpp.cmd}" "{source_file}" "{preprocessed_file_path}" re12 {compiler.cpp.flags} {preproc.macros.flags} -mmcs51 -D{build.mcu} -DF_CPU={build.f_cpu} -DF_EXT_OSC={build.f_oscillator_external} -DARDUINO={runtime.ide.version} -DARDUINO_{build.board} -DARDUINO_ARCH_{build.arch} {compiler.cpp.extra_flags} {build.extra_flags} {includes} {compiler.systemincludes}
+
+
+#===============================================================================
+#
+# tools: stcflash
+#
+#===============================================================================
+tools.stcflash.cmd={runtime.tools.python3.path}/python3
+tools.stcflash.path={runtime.tools.stcflash.path}
+
+tools.stcflash.upload.params.verbose=
+tools.stcflash.upload.params.quiet=
+tools.stcflash.upload.pattern="{cmd}" -I "{tools.stcflash.path}/stcflash.py" -p {serial.port} "{build.path}/{build.project_name}.hex"
