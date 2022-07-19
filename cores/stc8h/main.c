@@ -1,10 +1,11 @@
 #include <Arduino.h>
+#include <HardwareSerial.h>
 
 // void Interrupt_INT0(void) __interrupt(ISR_NO_INT0);
 void Interrupt_TIMER0(void) __interrupt(ISR_NO_TIMER0);
 // void Interrupt_INT1(void) __interrupt(ISR_NO_INT1);
 // void Interrupt_TIMER1(void) __interrupt(ISR_NO_TIMER1);
-// void Interrupt_UART0(void) __interrupt(ISR_NO_UART0);
+void Interrupt_UART0(void) __interrupt(ISR_NO_UART0);
 // void Interrupt_ADC(void) __interrupt(ISR_NO_ADC);
 // void Interrupt_LVD(void) __interrupt(ISR_NO_LVD);
 // void Interrupt_PCA(void) __interrupt(ISR_NO_PCA);
@@ -73,4 +74,19 @@ void Interrupt_TIMER0(void) __interrupt(ISR_NO_TIMER0)
 {
     // TI = 0;
     uptime_millis++;
+}
+
+void Interrupt_UART0(void) __interrupt(ISR_NO_UART0)
+{
+    if (Read_UART0_RI())
+    {
+        Clr_UART0_RI();
+        _Int_UART0_Rx_Handler();
+    }
+
+    if (Read_UART0_TI())
+    {
+        Clr_UART0_TI();
+        _Int_UART0_Tx_Handler();
+    }
 }

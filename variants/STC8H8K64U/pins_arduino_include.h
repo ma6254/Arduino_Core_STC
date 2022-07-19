@@ -19,6 +19,9 @@
 #define P6PORT 7
 #define P7PORT 8
 
+#define PIN_UART0_TXD 28
+#define PIN_UART0_RXD 27
+
 #define NOT_AN_INTERRUPT -1
 #define NOT_ANALOG 255
 

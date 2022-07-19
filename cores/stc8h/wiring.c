@@ -1,4 +1,5 @@
 #include "wiring_private.h"
+#include "HardwareSerial.h"
 
 void init()
 {
@@ -43,6 +44,8 @@ void init()
     Set_Timer0_T(35000);
 #endif
     Set_Timer0_Enable();
+
+    _HwSerialInit();
 
     EA = 1;
 }

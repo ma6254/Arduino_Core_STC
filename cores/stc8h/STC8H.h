@@ -122,6 +122,28 @@ SFR(AUXR, 0x8E);
 #define Set_Timer0_12T() (AUXR &= ~_BV(7))
 #define Set_Timer0_1T() (AUXR |= _BV(7))
 
+#define Set_Timer1_12T() (AUXR &= ~_BV(6))
+#define Set_Timer1_1T() (AUXR |= _BV(6))
+
+/*******************************************************************************
+ * UART 1 Registers
+ ******************************************************************************/
+SFR(SCON, 0x98);
+SFR(SBUF, 0x99);
+SFR(PCON, 0x87);
+
+#define Set_UART0_clk_div12() (AUXR &= ~_BV(5))
+#define Set_UART0_clk_div2() (AUXR |= _BV(5))
+
+#define Set_UART0_clkgen_T1() (AUXR &= ~_BV(0))
+#define Set_UART0_clkgen_T2() (AUXR |= _BV(0))
+
+#define Read_UART0_TI() (SCON & _BV(1))
+#define Read_UART0_RI() (SCON & _BV(0))
+
+#define Clr_UART0_TI() (SCON &= ~_BV(1))
+#define Clr_UART0_RI() (SCON &= ~_BV(0))
+
 /*******************************************************************************
  * GPIO Registers
  ******************************************************************************/
