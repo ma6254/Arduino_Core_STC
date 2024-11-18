@@ -1,5 +1,7 @@
 # Arduino core support for STC based boards
 
+**This project is under development and is not yet available.**
+
 ## Introduction
 
 This repo adds the support of STC MCU in Arduino IDE.
